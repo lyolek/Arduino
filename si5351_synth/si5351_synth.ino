@@ -234,6 +234,8 @@ void loop() {
         digitalWrite(bpf40Pin, HIGH);
         digitalWrite(bpf20Pin, LOW);
         digitalWrite(bpf10Pin, LOW);
+        freq = 7100000L;
+        si5351.set_freq(freq*100, SI5351_CLK1);
         break;
       }
       case (40) : {
@@ -242,6 +244,8 @@ void loop() {
         digitalWrite(bpf40Pin, LOW);
         digitalWrite(bpf20Pin, HIGH);
         digitalWrite(bpf10Pin, HIGH);
+        freq = 14100000L;
+        si5351.set_freq(freq*100, SI5351_CLK1);
         break;
       }
       case (20) : {
@@ -250,6 +254,8 @@ void loop() {
         digitalWrite(bpf40Pin, LOW);
         digitalWrite(bpf20Pin, LOW);
         digitalWrite(bpf10Pin, HIGH);
+        freq = 28100000L;
+        si5351.set_freq(freq*100, SI5351_CLK1);
         break;
       }
       case (10) : {
@@ -258,6 +264,8 @@ void loop() {
         digitalWrite(bpf40Pin, HIGH);
         digitalWrite(bpf20Pin, LOW);
         digitalWrite(bpf10Pin, LOW);
+        freq = 3700000L;
+        si5351.set_freq(freq*100, SI5351_CLK1);
         break;
       }
     }
